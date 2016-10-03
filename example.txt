@@ -1,0 +1,118 @@
+﻿<title class="ng-scope"></title>
+	<style class="ng-scope" type="text/css">
+	html,body{
+		height: 100%;
+		width: 100%;
+	}
+	#content{
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		background-size: 100% 100%;
+
+	}
+	.ui-dialog{
+		height:auto;
+		width: 50px;
+		height:50px;
+		position: absolute;
+		z-index: 999;
+		top: 110px;
+		left: 220px;
+		background-image: url(images/windmill.png);
+		background-size: 100% 100%;
+		cursor: pointer;
+	}
+	.shadow{
+		height:auto;
+		width: 50px;
+		height:50px;
+		position: absolute;
+		z-index: 99;
+		top: 110px;
+		left: 220px;
+		background-image: url(images/windmill.png);
+		background-size: 100% 100%;
+	}
+	p{
+		display: none;
+		width: 130px;
+		background-color: rgba(55,55,55,0.5);margin-left: 50px;
+	}
+	.model{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 99999;
+		background-color: rgba(51,51,51,0.5);
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	legend{
+		float: right;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		background-color: white;
+		margin-right:20px;
+		margin-top:20px;
+		text-align: center;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	table{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -110px;
+		margin-top: -50px;
+		width: 220px;
+		height: 100px;
+		background-color: rgba(255,255,255,0.5);
+		border-radius: 5px;
+	}
+	input{
+		background-color: rgba(100,100,100,0.6);
+		border:1px solid #BBFFFF;
+	}
+	#ensure{
+		border-radius: 5px;
+	}
+	#ansure2{
+		position: fixed;
+		bottom: 5px;
+		right: 5px;
+		z-index: 99;
+		cursor: pointer;
+	}
+	</style>
+	
+
+
+<div class="ng-scope" id="content">
+<div class="shadow">
+</div>
+<section id="x594y316" style="left: 561px; top: 292px;" class="ui-dialog">
+<p style="display: none;"><span>名称：</span><span id="inputname"></span><br><span>功率：</span><span id="inputwork"></span></p>
+</section>
+<div style="display: none;" class="model">
+	<div class="contentInput">
+		<legend>X</legend>
+		<table style="text-align:center">
+			<tbody><tr>
+				<td>名称：</td>
+				<td><input id="name" type="text"></td>
+			</tr>
+			<tr>
+				<td>功率：</td>
+				<td><input id="work" type="text"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button id="ensure">确定</button></td>
+			</tr>
+		</tbody></table>
+	</div>	
+</div>
+<div id="ansure2">确定</div>
+<section id="x706y444" style="left: 697px; top: 425px;" class="ui-dialog"><p style="display: none;"><span>名称：</span><span id="inputname"></span><br><span>功率：</span><span id="inputwork"></span></p></section><section class="ui-dialog"><p><span>名称：</span><span id="inputname"></span><br><span>功率：</span><span id="inputwork"></span></p></section></div>

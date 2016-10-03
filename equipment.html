@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body,html{
+		width: 100%;
+		height: 100%;
+		padding:0;
+		margin: 0;
+		border:0;
+		text-align: center;
+	}
+	form{
+		border:0;
+		padding:0;
+		margin:0;
+		width: 600px;
+		height:200px;
+		position: absolute;
+		
+		
+	}
+	.frame3{
+		margin-left:-250px;
+		left: 55%;
+		top:50%;
+		margin-top: -120px;
+	}
+	form p{
+		text-align: left;
+	}
+	table{
+		border: 1px solid grey;
+		width: 100%
+	}
+	tr{
+		border: 1px solid grey;
+		width: 100%;
+	}
+	td{
+		border: 1px solid grey;
+		width: 33%;
+		height: 35px;
+		line-height: 35px;
+	}
+	.photo{
+		width: 100px;
+		height:100px;
+
+	}
+	</style>
+</head>
+<body ng-controller="equipmentCon">
+<form id="frame3" class="frame3">
+	<p>
+		<select name="select" id="select_k1" class="xla_k"> 
+			<option value="选择品牌">选择品牌</option> 
+			<option value="选择品牌1">选择品牌1</option>
+		</select>
+		<button>添加</button>
+	</p>
+	
+	<table cellspacing="0" cellpadding="0">
+			<tr>
+				<td>设备名：</td>
+				<td>
+					<input type="text">
+				</td>
+				<td rowspan="5" border="0">
+					<img src="images/timg.jpg" class="photo">
+				</td>
+			</tr>
+			<tr>
+				<td>生产厂家：</td>
+				<td>
+					<input type="text">
+				</td>	
+			</tr>
+			<tr>
+				<td>额定功率：</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>数量：</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>采集时间：</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+			<!-- <tr>
+				<td>额定功率</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>额定功率</td>
+				<td>1</td>
+			</tr> -->
+		<!-- </tbody> -->
+	</table>
+</form>
+</body>
+<script type="text/javascript">
+	    window.onload=window.onresize=function(){
+	    	// alert("asd")
+        var h;
+        var w;
+        if(!!(window.attachEvent && !window.opera)){
+             h = document.documentElement.body.height();
+             w = document.documentElement.body.width();
+        }else{
+            h = window.innerHeight;
+            w = window.innerWidth;
+        }
+
+        //定位
+        var marginleft
+        var margintop=(h-400)/2;
+        document.getElementById("frame3").removeAttribute("class")
+         marginleft=(w-700)/2;
+        if (marginleft>=0) {document.getElementById("frame3").style.paddingLeft=marginleft+"px";}else{document.getElementById("frame3").style.paddingLeft=0;};
+        if (margintop>=0) {document.getElementById("frame3").style.paddingTop=margintop+"px";}else{document.getElementById("frame3").style.paddingTop=0;};        
+    }
+</script>
+</html>

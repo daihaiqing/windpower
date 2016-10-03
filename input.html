@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body,html{
+		width: 100%;
+		height: 100%;
+		padding:0;
+		margin: 0;
+		border:0;
+		text-align: center;
+		/*min-width: 1200px;*/
+		/*background-color: blue*/
+	}
+	form{
+		border:0;
+		padding:0;
+		margin:0;
+		width: 800px;
+		height:200px;
+		/*background-color: red;*/
+		position: absolute;
+	}
+	.frame1{
+		left: 55%;
+		margin-left:-300px;
+	}
+	form p{
+		text-align: left;
+	}
+	table{
+		border: 1px solid grey;
+		width: 100%
+	}
+	tr{
+		border: 1px solid grey;
+		width: 100%;
+	}
+	th{
+		border: 1px solid grey;
+		width: 25%;
+	}
+	tbody td{
+		border: 1px solid grey;
+		width: 25%;
+	}
+	</style>
+</head>
+<body ng-controller="rest">
+<form id="form1" class="frame1">
+	<p>
+		<select name="select" id="select_k1" class="xla_k"> 
+			<option value="选择品牌">选择品牌</option> 
+			<option value="选择品牌1">选择品牌1</option>
+		</select>
+		<button>添加</button>
+	</p>
+	
+	<table cellspacing="0" cellpadding="0">
+		<thead>
+			<tr>
+				<th>设备类型名</th>
+				<th>添加时间</th>
+				<th>时间</th>
+				<th>修改/删除</th>
+			</tr>
+		</thead>
+		<tbody cellpadding="0" cell-spacing="0">
+			<tr>
+				<td>阿三</td>
+				<td>阿三</td>
+				<td>1</td>
+				<td>
+					<button>修改</button>
+					<button>删除</button>
+				</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>
+					<button>修改</button>
+					<button>删除</button>
+				</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>
+					<button>修改</button>
+					<button>删除</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+</body>
+<script type="text/javascript">
+	    window.onload=window.onresize=function(){
+	    	// alert("asd")
+        var h;
+        var w;
+        if(!!(window.attachEvent && !window.opera)){
+             h = document.documentElement.body.height();
+             w = document.documentElement.body.width();
+        }else{
+            h = window.innerHeight;
+            w = window.innerWidth;
+        }
+
+        //定位
+        var marginleft
+        // margintop=(h-290)/2;
+        document.getElementById("form1").removeAttribute("class")
+         marginleft=(w-1000)/2;
+        if (marginleft>=0) {document.getElementById("form1").style.paddingLeft=marginleft+"px";}else{document.getElementById("form1").style.paddingLeft=0;};        
+    }
+</script>
+</html>
